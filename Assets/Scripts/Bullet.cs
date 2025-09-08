@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject explosion;
     // Update is called once per frame
     void Update()
     {
@@ -17,21 +16,13 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            StartCoroutine(bulletHitEnemy());
+            speed = 0;
+            bullet.SetActive(false);
+            Destroy(this.gameObject);
         }
         if (collision.gameObject.CompareTag("Wall"))
         {
             Destroy(this.gameObject);
         }
-    }
-
-    private IEnumerator bulletHitEnemy()
-    {
-        speed = 0;
-        bullet.SetActive(false);
-        explosion.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.2f);
-        explosion.SetActive(false);
-        Destroy(this.gameObject);
     }
 }
