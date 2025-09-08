@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : Enemy.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script is the code for the snake enemy
+*****************************************************************************/
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;

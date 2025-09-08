@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : EnemySnail.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script is the code for the Snail
+*****************************************************************************/
 using UnityEngine;
 
 public class EnemySnail : MonoBehaviour

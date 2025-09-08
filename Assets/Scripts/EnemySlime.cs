@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : EnemySlime.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script is the code for the slime
+*****************************************************************************/
 using UnityEngine;
 
 public class EnemySlime : MonoBehaviour

@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : ScoreController.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script tracks score and high score
+*****************************************************************************/
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;

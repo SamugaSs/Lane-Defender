@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : LifeController.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script tracks the players life
+*****************************************************************************/
 using System;
 using System.Collections;
 using UnityEngine;

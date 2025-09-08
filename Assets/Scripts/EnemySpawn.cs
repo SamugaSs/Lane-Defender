@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : EnemySpawn.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script spawns in enemies
+*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

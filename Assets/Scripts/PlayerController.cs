@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : PlayerController.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script controls the player 
+*****************************************************************************/
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;

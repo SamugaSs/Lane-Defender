@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name : Bullet.cs
+// Author : Gabriel Flores-Martinez
+// Creation Date : September 7, 2025
+//
+// Brief Description : This script allows the bullet fired to move and damage enemies
+*****************************************************************************/
 using System.Collections;
 using UnityEngine;
 
