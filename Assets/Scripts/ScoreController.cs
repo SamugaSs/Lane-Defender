@@ -18,7 +18,6 @@ public class ScoreController : MonoBehaviour
     private int score;
     private int HighScore;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         score = 0;
