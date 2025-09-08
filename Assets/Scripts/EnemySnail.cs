@@ -5,6 +5,7 @@ public class EnemySnail : MonoBehaviour
     private int health;
     private LifeController life;
     private ScoreController Score;
+    private PlayerController player;
 
     private float speed = 1f;
     [SerializeField] private GameObject walking;
@@ -26,6 +27,7 @@ public class EnemySnail : MonoBehaviour
         this.transform.Translate(Vector2.left * Time.deltaTime * speed);
         life = GameObject.FindObjectOfType<LifeController>();
         Score = GameObject.FindObjectOfType<ScoreController>();
+        player = GameObject.FindObjectOfType<PlayerController>();
     }
     private void UpdateHealth()
     {
@@ -38,7 +40,7 @@ public class EnemySnail : MonoBehaviour
             walking.SetActive(false);
             dead.SetActive(true);
             speed = 0;
-            enemyDeath.Play();
+            player.EnemyDead();
             Invoke("Dead", deathDelay);
         }
         else
@@ -46,7 +48,7 @@ public class EnemySnail : MonoBehaviour
             walking.SetActive(false);
             hit.SetActive(true);
             speed = 0;
-            enemyhit.Play();
+            player.EnemyHit();
             Invoke("Hit", deathDelay);
         }
 

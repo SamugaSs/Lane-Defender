@@ -16112,7 +16112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RestartButton: {fileID: 1184599348}
-  QuitButton: {fileID: 0}
+  QuitButton: {fileID: 296752172}
   life1: {fileID: 1409457651}
   life2: {fileID: 987063273}
   life3: {fileID: 794792746}
@@ -17953,6 +17953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 99543655}
+  highScoreText: {fileID: 1735224446}
 --- !u!1 &1354514415
 GameObject:
   m_ObjectHideFlags: 0
@@ -22684,6 +22685,8 @@ MonoBehaviour:
   bulletExplosion: {fileID: 727210421}
   bullet: {fileID: 6076750888847393519, guid: 360f4119e0aadd84486c8b52d448fffb, type: 3}
   TankShoot: {fileID: 1853263585}
+  enemyDeath: {fileID: 1846843897}
+  enemyhit: {fileID: 504309960}
   canMove: 1
   canShoot: 1
   playerSpeed: 5

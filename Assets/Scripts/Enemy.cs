@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     private int health;
     private LifeController life;
     private ScoreController Score;
+    private PlayerController player;
 
 
     private float speed = 2f;
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         this.transform.Translate(Vector2.left * Time.deltaTime * speed);
         life = GameObject.FindObjectOfType<LifeController>();
         Score = GameObject.FindObjectOfType<ScoreController>();
+        player = GameObject.FindObjectOfType<PlayerController>();
     }
 
     private void UpdateHealth()
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
             walking.SetActive(false);
             dead.SetActive(true);
             speed = 0;
-            enemyDeath.Play();
+            player.EnemyDead();
             Invoke("Dead", deathDelay);
         }
     }

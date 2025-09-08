@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletExplosion;
     [SerializeField] private GameObject bullet;
     [SerializeField] private AudioSource TankShoot;
+    [SerializeField] private AudioSource enemyDeath;
+    [SerializeField] private AudioSource enemyhit;
     public bool canMove = true;
     public bool canShoot = true;
     private bool BulletCooldown;
@@ -90,5 +92,15 @@ public class PlayerController : MonoBehaviour
         BulletCooldown = false;
         yield return new WaitForSecondsRealtime(2);
         BulletCooldown = true;
+    }
+
+    public void EnemyHit()
+    {
+        enemyhit.Play();
+    }
+
+    public void EnemyDead()
+    {
+        enemyDeath.Play();
     }
 }

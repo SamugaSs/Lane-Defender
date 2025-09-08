@@ -49,7 +49,7 @@ public class EnemySpawn : MonoBehaviour
             int SPIndex = UnityEngine.Random.Range(0, 4);
             GameObject Enemy = Instantiate(prefabList[prefabIndex], SPList[SPIndex].transform.position, Quaternion.identity);
 
-            yield return new WaitForSecondsRealtime(5.5f);
+            yield return new WaitForSecondsRealtime(5f);
         }
     }
 

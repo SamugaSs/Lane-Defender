@@ -6,6 +6,7 @@ public class EnemySlime : MonoBehaviour
     private int health;
     private LifeController life;
     private ScoreController Score;
+    private PlayerController player;
 
     private float speed = 1.5f;
     [SerializeField] private GameObject walking;
@@ -14,6 +15,7 @@ public class EnemySlime : MonoBehaviour
     [SerializeField] private float deathDelay = 1.5f;
     [SerializeField] private AudioSource enemyDeath;
     [SerializeField] private AudioSource enemyhit;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,7 @@ public class EnemySlime : MonoBehaviour
         this.transform.Translate(Vector2.left * Time.deltaTime * speed);
         life = GameObject.FindObjectOfType<LifeController>();
         Score = GameObject.FindObjectOfType<ScoreController>();
+        player = GameObject.FindObjectOfType<PlayerController>();
     }
     private void UpdateHealth()
     {
@@ -38,7 +41,7 @@ public class EnemySlime : MonoBehaviour
             walking.SetActive(false);
             dead.SetActive(true);
             speed = 0;
-            enemyDeath.Play();
+            player.EnemyDead();
             Invoke("Dead", deathDelay);
         }
         else
@@ -46,7 +49,7 @@ public class EnemySlime : MonoBehaviour
             walking.SetActive(false);
             hit.SetActive(true);
             speed = 0;
-            enemyhit.Play();
+            player.EnemyHit();
             Invoke("Hit", deathDelay);
         }
 
